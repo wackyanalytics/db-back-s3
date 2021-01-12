@@ -1,2 +1,2 @@
 #!/bin/bash
-apt-get install python -y
+apt-get install python-2 -y
