@@ -1,2 +1,2 @@
 #!/bin/bash
-apt-get install python3.6-venv -y
+apt-get install python -y
