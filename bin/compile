@@ -20,6 +20,10 @@ CACHE_DIR=$2
 LP_DIR=`cd $(dirname $0); cd ..; pwd`
 BUILDPACK_DIR="$(dirname $(dirname $0))"
 
+echo "-----> Installing venv"
+"$BUILDPACK_DIR/bin/install_pip.sh"
+echo "-----> Installed venv"
+
 echo "-----> Fetching AWS CLI into slug"
 curl --progress-bar -o /tmp/awscli-bundle.zip $AWS_CLI_URL
 unzip -qq -d "$BUILD_DIR/vendor" /tmp/awscli-bundle.zip
