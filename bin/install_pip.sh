@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo apt-get install python3-venv -y
+apt-get install python3.6-venv -y
