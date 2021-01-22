@@ -23,6 +23,8 @@ BUILDPACK_DIR="$(dirname $(dirname $0))"
 echo "-----> Fetching AWS CLI into slug"
 curl --progress-bar -o /tmp/awscli-bundle.zip $AWS_CLI_URL
 unzip -qq -d "$BUILD_DIR/vendor" /tmp/awscli-bundle.zip
+echo "-ref---"
+echo "$BUILD_DIR/vendor"
 
 echo "-----> adding installer script into app/.profile.d"
 mkdir -p $BUILD_DIR/.profile.d
