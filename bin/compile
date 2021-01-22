@@ -11,7 +11,7 @@ set -e
 unset GIT_DIR
 
 # config
-AWS_CLI_URL="https://s3.amazonaws.com/aws-cli/awscli-bundle.zip"
+AWS_CLI_URL="https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip"
 
 # parse and derive params
 BUILD_DIR=$1
@@ -19,10 +19,6 @@ CACHE_DIR=$2
 
 LP_DIR=`cd $(dirname $0); cd ..; pwd`
 BUILDPACK_DIR="$(dirname $(dirname $0))"
-
-echo "-----> Installing venv"
-"$BUILDPACK_DIR/bin/install_pip.sh"
-echo "-----> Installed venv"
 
 echo "-----> Fetching AWS CLI into slug"
 curl --progress-bar -o /tmp/awscli-bundle.zip $AWS_CLI_URL
